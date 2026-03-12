@@ -3,199 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCU Caving Club | Exploration Refined</title>
+    <title>DCU Caving Club | Home</title>
     <style>
-        /* CSS Variables for professional consistency */
-        :root {
-            --mint: #A3DFD1;
-            --black: #1a1a1a;
-            --white: #ffffff;
-            --soft-gray: #f9f9f9;
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        /* Base Styles */
-        body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-            margin: 0; 
-            background-color: var(--white); 
-            color: var(--black); 
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Fade-In-Up Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Header & Logo */
-        header { 
-            padding: 60px 20px 20px; 
-            text-align: center; 
-            background: var(--white);
-        }
-        
-        .logo { 
-            max-width: 120px; 
-            height: auto; 
-            filter: grayscale(10%) contrast(1.1);
-            transition: var(--transition);
-        }
-        
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .club-name { 
-            font-size: 1.2rem; 
-            font-weight: 300; 
-            letter-spacing: 5px; 
-            text-transform: uppercase;
-            margin-top: 20px;
-        }
-
-        /* Minimalist Sticky Nav */
-        nav { 
-            background-color: rgba(255, 255, 255, 0.95); 
-            padding: 20px 0; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            border-bottom: 1px solid #eee;
-        }
-        
-        nav ul { 
-            list-style: none; 
-            margin: 0; 
-            padding: 0; 
-            display: flex; 
-            justify-content: center; 
-            gap: 40px;
-        }
-        
-        nav a { 
-            color: var(--black); 
-            font-size: 0.75rem;
-            font-weight: 600; 
-            text-transform: uppercase; 
-            letter-spacing: 2px;
-            text-decoration: none;
-            position: relative;
-            transition: var(--transition);
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--mint);
-            transition: var(--transition);
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero / Main Content */
-        .container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 80px 20px; 
-            animation: fadeInUp 1.2s ease-out; /* Applying the animation */
-        }
-
-        .welcome-section { 
-            text-align: center; 
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        h2 { 
-            font-size: 2.5rem; 
-            font-weight: 700; 
-            margin-bottom: 30px; 
-            line-height: 1.2;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 40px;
-        }
-
-        .landing-image { 
-            width: 100%; 
-            height: 600px;
-            object-fit: cover;
-            border-radius: 4px; 
-            filter: brightness(0.9);
-            margin: 40px 0;
-            transition: var(--transition);
-        }
-
-        .landing-image:hover {
-            filter: brightness(1);
-        }
-
-        /* Social Footer */
-        footer { 
-            padding: 80px 20px; 
-            text-align: center; 
-            background-color: var(--soft-gray);
-            border-top: 1px solid #eee;
-        }
-
-        .social-links { 
-            list-style: none; 
-            padding: 0; 
-            display: flex; 
-            justify-content: center; 
-            gap: 30px; 
-            margin-bottom: 30px;
-        }
-        
-        .social-links a { 
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--black);
-            opacity: 0.6;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover { 
-            opacity: 1;
-            color: var(--mint);
-        }
-
-        .copyright {
-            font-size: 0.7rem;
-            color: #999;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+        :root { --mint: #A3DFD1; --black: #1a1a1a; --white: #ffffff; --soft-gray: #f9f9f9; --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--white); color: var(--black); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        header { padding: 40px 20px; text-align: center; }
+        .logo { max-width: 100px; transition: var(--transition); }
+        .club-name { font-size: 1rem; font-weight: 300; letter-spacing: 6px; text-transform: uppercase; margin-top: 20px; }
+        nav { background: rgba(255, 255, 255, 0.98); padding: 20px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 40px; }
+        nav a { color: var(--black); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; transition: var(--transition); }
+        nav a:hover { color: var(--mint); }
+        .hero-graphic { width: 100%; height: 70vh; background: url('dcucc_v1.jpg') no-repeat center center; background-size: cover; display: flex; align-items: center; justify-content: center; margin: 40px 0; }
+        .graphic-caption { background: white; padding: 30px 60px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); text-align: center; animation: fadeInUp 1.5s ease; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; animation: fadeInUp 1s ease; }
+        .site-map { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 60px 0; }
+        .toc-card { padding: 40px; border: 1px solid #eee; text-decoration: none; color: var(--black); transition: var(--transition); display: flex; flex-direction: column; }
+        .toc-card:hover { border-color: var(--mint); background: var(--soft-gray); transform: translateY(-5px); }
+        .toc-card h3 { font-size: 0.8rem; letter-spacing: 3px; color: var(--mint); margin: 0; }
+        .toc-card p { font-size: 1.2rem; font-weight: 600; margin: 10px 0; }
+        footer { padding: 80px 20px; text-align: center; background: var(--soft-gray); border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
-
-    <header>
-        <img src="dcucc.jpg" alt="DCU Caving Club Logo" class="logo">
-        <h1 class="club-name">DCU Caving Club</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="trips.html">Trips</a></li>
-
+    <header><img src="dcucc.jpg" class="logo"><h1 class="club-name">DCU Caving Club</h1></header>
+    <nav><ul><li><a href="index.html">Home</a></li><li><a href="trips.html">Trips</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="highlights.html">Highlights</a></li><li><a href="about.html">About</a></li><li><a href="join.html">Join</a></li></ul></nav>
+    <section class="hero-graphic"><div class="graphic-caption"><h2 style="margin:0; letter-spacing: 10px; text-transform: uppercase;">The Descent</h2></div></section>
+    <div class="container">
+        <h2 style="font-size: 2.5rem; text-align: center;">Exploration Refined.</h2>
+        <div class="site-map">
+            <a href="trips.html" class="toc-card"><h3>01</h3><p>Trip Reports</p><span>Chronicles of the deep.</span></a>
+            <a href="gallery.html" class="toc-card"><h3>02</h3><p>Gallery</p><span>Visualizing the dark.</span></a>
+            <a href="highlights.html" class="toc-card"><h3>03</h3><p>Highlights</p><span>Achievements & News.</span></a>
+            <a href="about.html" class="toc-card"><h3>04</h3><p>About</p><span>Our team and mission.</span></a>
+            <a href="join.html" class="toc-card"><h3>05</h3><p>Join Us</p><span>Start your journey.</span></a>
+        </div>
+    </div>
+    <footer><p style="font-size: 0.7rem; letter-spacing: 2px;">&copy; 2026 DCU CAVING CLUB</p></footer>
+</body>
+</html>
