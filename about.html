@@ -3,70 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCU Caving Club - About Us</title>
+    <title>About | DCUCC</title>
     <style>
-        /* Shared Styles */
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #f4f4f4; color: #000; }
-        a { text-decoration: none; color: inherit; }
-        h1, h2, h3 { color: #000; }
-        .container { max-width: 960px; margin: 0 auto; padding: 20px; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        header { background-color: #A3DFD1; color: #000; padding: 20px; text-align: center; border-bottom: 2px solid #000; }
-        .logo { max-width: 150px; height: auto; }
-        .club-name { font-size: 2.5em; margin: 10px 0 0; }
-        nav { background-color: #000; padding: 10px; border-bottom: 2px solid #A3DFD1; text-align: center; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: inline-flex; }
-        nav li { margin: 0 15px; }
-        nav a { color: #A3DFD1; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-        nav a:hover { color: #DEF3EE; }
-        main { padding: 30px 0; }
-        footer { background-color: #A3DFD1; color: #000; padding: 20px; text-align: center; border-top: 2px solid #000; margin-top: 30px; }
-        .social-links { list-style: none; padding: 0; display: inline-flex; justify-content: center; gap: 20px; margin: 10px 0; }
-        .social-links li a { font-weight: bold; border-bottom: 1px solid #000; }
-        .social-links li a:hover { color: #fff; border-bottom-color: #fff; }
+        :root { --mint: #A3DFD1; --black: #1a1a1a; --white: #ffffff; --soft-gray: #f9f9f9; --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--white); color: var(--black); line-height: 1.8; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        header { padding: 40px 20px 10px; text-align: center; }
+        .logo { max-width: 80px; }
+        .club-name { font-size: 1rem; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
+        
+        nav { background: rgba(255, 255, 255, 0.95); padding: 20px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 30px; }
+        nav a { color: var(--black); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; }
+
+        .container { max-width: 700px; margin: 0 auto; padding: 80px 20px; animation: fadeInUp 1s ease-out; }
+        h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 30px; text-align: center; }
+        p { font-size: 1.1rem; color: #444; margin-bottom: 25px; }
+        .accent-text { color: var(--mint); font-weight: 700; }
+
+        footer { padding: 60px 20px; text-align: center; background: var(--soft-gray); border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
-
-    <header>
-        <img src="image_0.png" alt="Dublin City University Caving Club Logo" class="logo">
-        <h1 class="club-name">Dublin City University Caving Club</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="trips.html">Trip Reports</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="highlights.html">Recent Highlights</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="join.html">Join Us</a></li>
-        </ul>
-    </nav>
-
+    <header><a href="index.html"><img src="dcucc.jpg" class="logo"></a><div class="club-name">DCU Caving Club</div></header>
+    <nav><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="highlights.html">Highlights</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="join.html">Join</a></li>
+    </ul></nav>
     <div class="container">
-        <main>
-            <h2>Who We Are</h2>
-            <p>The Dublin City University Caving Club is a thriving student organization dedicated to the exploration, study, and conservation of caves. Established in [Insert Year, e.g., 1995], we provide a safe and organized environment for students to experience the thrill of the underground world.</p>
-            <p>We explore all types of caves, from classic limestone systems in Ireland (Clare, Fermanagh) to deeper vertical pitches abroad. Our members include complete novices, experienced cavers, and those interested in cave photography, survey, and conservation.</p>
-            <h2>Our Mission</h2>
-            <ul>
-                <li>To promote the sport of caving among students in DCU.</li>
-                <li>To provide high-quality training in safe caving techniques.</li>
-                <li>To facilitate expeditions and explorations.</li>
-                <li>To foster an appreciation for the unique environments of caves and to actively promote their conservation.</li>
-            </ul>
-        </main>
+        <h2>We are the underground.</h2>
+        <p>DCU Caving Club is a community of explorers, photographers, and athletes. We specialize in the study and exploration of <span class="accent-text">karst environments</span> and subterranean systems.</p>
+        <p>Founded on the principles of safety and conservation, we provide DCU students with the skills required to navigate the world's most inaccessible spaces.</p>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Dublin City University Caving Club. All rights reserved.</p>
-        <p>Connect with us:</p>
-        <ul class="social-links">
-             <li><a href="https://www.facebook.com/PLACEHOLDER" target="_blank">Facebook</a></li>
-            <li><a href="https://www.instagram.com/PLACEHOLDER" target="_blank">Instagram</a></li>
-            <li><a href="https://www.dcu.ie/clubssocieties/PLACEHOLDER" target="_blank">DCU Clubs & Societies</a></li>
-        </ul>
-    </footer>
-
+    <footer><p style="font-size: 0.7rem; color: #999;">&copy; 2026 DCU Caving Club</p></footer>
 </body>
 </html>
