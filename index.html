@@ -3,76 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCU Caving Club - Home</title>
+    <title>DCU Caving Club | Exploration Refined</title>
     <style>
-        /* CSS resets and common styles */
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #f4f4f4; color: #000; }
-        a { text-decoration: none; color: inherit; }
-        h1, h2, h3 { color: #000; }
-        .container { max-width: 960px; margin: 0 auto; padding: 20px; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        /* CSS Variables for professional consistency */
+        :root {
+            --mint: #A3DFD1;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --soft-gray: #f9f9f9;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
 
-        /* Header styles matching logo colors */
-        header { background-color: #A3DFD1; color: #000; padding: 20px; text-align: center; border-bottom: 2px solid #000; }
-        .logo { max-width: 150px; height: auto; }
-        .club-name { font-size: 2.5em; margin: 10px 0 0; }
+        /* Base Styles */
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            margin: 0; 
+            background-color: var(--white); 
+            color: var(--black); 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-        /* Navigation styles */
-        nav { background-color: #000; padding: 10px; border-bottom: 2px solid #A3DFD1; text-align: center; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: inline-flex; }
-        nav li { margin: 0 15px; }
-        nav a { color: #A3DFD1; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-        nav a:hover { color: #DEF3EE; }
+        /* Fade-In-Up Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-        /* Main content */
-        main { padding: 30px 0; }
-        .welcome-section { text-align: center; }
-        .landing-image { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); margin: 20px 0; }
+        /* Header & Logo */
+        header { 
+            padding: 60px 20px 20px; 
+            text-align: center; 
+            background: var(--white);
+        }
+        
+        .logo { 
+            max-width: 120px; 
+            height: auto; 
+            filter: grayscale(10%) contrast(1.1);
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
 
-        /* Footer styles and social links */
-        footer { background-color: #A3DFD1; color: #000; padding: 20px; text-align: center; border-top: 2px solid #000; margin-top: 30px; }
-        .social-links { list-style: none; padding: 0; display: inline-flex; justify-content: center; gap: 20px; margin: 10px 0; }
-        .social-links li a { font-weight: bold; border-bottom: 1px solid #000; }
-        .social-links li a:hover { color: #fff; border-bottom-color: #fff; }
+        .club-name { 
+            font-size: 1.2rem; 
+            font-weight: 300; 
+            letter-spacing: 5px; 
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        /* Minimalist Sticky Nav */
+        nav { 
+            background-color: rgba(255, 255, 255, 0.95); 
+            padding: 20px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid #eee;
+        }
+        
+        nav ul { 
+            list-style: none; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+            gap: 40px;
+        }
+        
+        nav a { 
+            color: var(--black); 
+            font-size: 0.75rem;
+            font-weight: 600; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            text-decoration: none;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--mint);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero / Main Content */
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 80px 20px; 
+            animation: fadeInUp 1.2s ease-out; /* Applying the animation */
+        }
+
+        .welcome-section { 
+            text-align: center; 
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        h2 { 
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            margin-bottom: 30px; 
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .landing-image { 
+            width: 100%; 
+            height: 600px;
+            object-fit: cover;
+            border-radius: 4px; 
+            filter: brightness(0.9);
+            margin: 40px 0;
+            transition: var(--transition);
+        }
+
+        .landing-image:hover {
+            filter: brightness(1);
+        }
+
+        /* Social Footer */
+        footer { 
+            padding: 80px 20px; 
+            text-align: center; 
+            background-color: var(--soft-gray);
+            border-top: 1px solid #eee;
+        }
+
+        .social-links { 
+            list-style: none; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+            gap: 30px; 
+            margin-bottom: 30px;
+        }
+        
+        .social-links a { 
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--black);
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover { 
+            opacity: 1;
+            color: var(--mint);
+        }
+
+        .copyright {
+            font-size: 0.7rem;
+            color: #999;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="image_0.png" alt="Dublin City University Caving Club Logo" class="logo">
-        <h1 class="club-name">Dublin City University Caving Club</h1>
+        <img src="dcucc.jpg" alt="DCU Caving Club Logo" class="logo">
+        <h1 class="club-name">DCU Caving Club</h1>
     </header>
 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="trips.html">Trip Reports</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="highlights.html">Recent Highlights</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="join.html">Join Us</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <main>
-            <section class="welcome-section">
-                <h2>Welcome to DCU's Underground Adventurers</h2>
-                <p>Explore the hidden world with Dublin City University's Caving Club. Whether you're a seasoned subterranean explorer or a curious beginner, we have a place for you.</p>
-                <img src="image_1.png" alt="A view looking out from inside a dark cave entrance towards a forest" class="landing-image">
-                <p>From the limestone heart of Clare to deep vertical systems abroad, we delve into the dark and reveal the incredible. Use the menu above to explore our past trips, see our gallery, and find out how to get involved.</p>
-            </section>
-        </main>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Dublin City University Caving Club. All rights reserved.</p>
-        <p>Connect with us:</p>
-        <ul class="social-links">
-            <li><a href="https://www.facebook.com/PLACEHOLDER" target="_blank">Facebook</a></li>
-            <li><a href="https://www.instagram.com/PLACEHOLDER" target="_blank">Instagram</a></li>
-            <li><a href="https://www.dcu.ie/clubssocieties/PLACEHOLDER" target="_blank">DCU Clubs & Societies</a></li>
-        </ul>
-    </footer>
-
-</body>
-</html>
+            <li><a href="trips.html">Trips</a></li>
